@@ -26,8 +26,6 @@ public class BrightnessAPI {
 
         if (brightness <= 0) {
             brightness = 0;
-        } else if (brightness >= 255) {
-            brightness = 255;
         }
         Settings.System.putInt(contentResolver, Settings.System.SCREEN_BRIGHTNESS, brightness);
         ResultReturner.noteDone(receiver, intent);
